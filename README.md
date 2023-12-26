@@ -1,2 +1,2 @@
 # SoftUni
-A repository cointaining problem solutions from SoftUni exams
+A repository cointaining problem solutions from the SoftUni curriculum
