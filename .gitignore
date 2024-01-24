@@ -36,7 +36,7 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit bonus_exercises / coverage reports
+# Unit stacks_queues_tuples_sets / coverage reports
 htmlcov/
 .tox/
 .nox/
