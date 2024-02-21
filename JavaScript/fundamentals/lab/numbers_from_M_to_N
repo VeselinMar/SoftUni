@@ -1,8 +1,8 @@
-function nums_from_to(M, N) {
+function numsFromTo(M, N) {
     for(let i = M; i >= N; i--) {
         console.log(i)
-    }
+    };
 }
 
-nums_from_to(6, 2)
-nums_from_to(4, 1)
+numsFromTo(6, 2)
+numsFromTo(4, 1)

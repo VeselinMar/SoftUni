@@ -1,13 +1,13 @@
 function largest_number(num_1, num_2, num_3) {
     let largest;
 
-    if(num_1 > num_2 && num_1>num_3) {
+    if (num_1 > num_2 && num_1>num_3) {
         largest = num_1
     }
-    else if(num_2 > num_1 && num_2 > num_3) {
+    else if (num_2 > num_1 && num_2 > num_3) {
         largest = num_2
     }
-    else if(num_3 > num_1 && num_3 > num_2) {
+    else if (num_3 > num_1 && num_3 > num_2) {
         largest = num_3
     }
     

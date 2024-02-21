@@ -1,4 +1,4 @@
-function month_planner(month) {
+function monthPlanner(month) {
     if(month > 12 || month < 1) {
         console.log("Error!")
     }
@@ -42,9 +42,9 @@ function month_planner(month) {
     }
 }
 
-month_planner(0)
-month_planner(12)
-month_planner(1)
-month_planner(4)
-month_planner(12)
-month_planner(14)
+monthPlanner(0)
+monthPlanner(12)
+monthPlanner(1)
+monthPlanner(4)
+monthPlanner(12)
+monthPlanner(14)
