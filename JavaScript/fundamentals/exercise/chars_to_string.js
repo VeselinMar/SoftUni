@@ -1,9 +1,9 @@
-function chars_to_string(first, second, third) {
+function charsToString(first, second, third) {
     let result = ""
     result += first + second + third
     console.log(result)
 }
 
-chars_to_string("a", "b", "c")
-chars_to_string("%", "2", "0")
-chars_to_string("1", "5", "p")
+charsToString("a", "b", "c")
+charsToString("%", "2", "0")
+charsToString("1", "5", "p")

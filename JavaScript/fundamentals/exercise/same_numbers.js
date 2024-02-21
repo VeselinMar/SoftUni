@@ -1,4 +1,4 @@
-function same_numbers(number) {
+function sameNumbers(number) {
     let result = 0
     let same = true
     let last = 'a'
@@ -14,5 +14,5 @@ function same_numbers(number) {
     console.log(result)
 }
     
-same_numbers(2222222)
-same_numbers(1234)
+sameNumbers(2222222)
+sameNumbers(1234)

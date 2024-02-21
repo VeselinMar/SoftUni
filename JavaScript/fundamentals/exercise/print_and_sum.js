@@ -1,4 +1,4 @@
-function print_sum(start, end) {
+function printSum(start, end) {
     let result = 0
     let valuesString = ''
 
@@ -11,6 +11,6 @@ function print_sum(start, end) {
     console.log(`Sum: ${result}`);
 }
 
-print_sum(5, 10)
-print_sum(0,26)
-print_sum(50, 60)
+printSum(5, 10)
+printSum(0,26)
+printSum(50, 60)

@@ -1,7 +1,9 @@
 function cooking(number, first, second, third, fourth, fifth) {
     let num = parseInt(number, 10)
+
     for (let i = 1; i < arguments.length; i++) {
-        arg = arguments[i]
+        let arg = arguments[i];
+
         switch (arg) {
             case "chop":
                 num /= 2;
@@ -19,6 +21,7 @@ function cooking(number, first, second, third, fourth, fifth) {
                 num -= num * 0.2;
                 break;
         }
+
         console.log(num)
 
     }
