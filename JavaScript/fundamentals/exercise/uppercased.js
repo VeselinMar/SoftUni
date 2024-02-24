@@ -1,11 +1,11 @@
 function upper(str) {
-    let result = '';
+    let result = ' ';
     let isWordStart = true;
 
     for (let i = 0; i < str.length; i++) {
-        let currentChar = str.charAt(i);
+        let currentChar = str[i];
     
-    if(/[a-zA-Z]/.test(currentChar)) {
+    if(/\w/.test(currentChar)) {
         result += currentChar.toUpperCase();
         isWordStart = true;
     } else {
