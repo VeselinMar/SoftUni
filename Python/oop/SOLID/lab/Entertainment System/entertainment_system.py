@@ -15,7 +15,7 @@ class HDMICableConnection:
 
 class EntertainmentDevice:
 
-    def __init__(self, name: str, id_: int, power: int = 0):
+    def __init__(self, name: str, id_: int, power: bool = False):
         self.name = name
         self.id = id_
         self.power = power
