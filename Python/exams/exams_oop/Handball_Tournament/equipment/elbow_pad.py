@@ -1,4 +1,4 @@
-from project.equipment.base_equipment import BaseEquipment
+from Handball_Tournament.equipment.base_equipment import BaseEquipment
 
 
 class ElbowPad(BaseEquipment):

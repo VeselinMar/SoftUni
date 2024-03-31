@@ -1,4 +1,4 @@
-from project.tournament import Tournament
+from Handball_Tournament.tournament import Tournament
 
 t = Tournament('SoftUniada2023', 2)
 
