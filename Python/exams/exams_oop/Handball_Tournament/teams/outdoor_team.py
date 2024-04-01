@@ -1,4 +1,4 @@
-from Handball_Tournament.teams.base_team import BaseTeam
+from Python.exams.exams_oop.Handball_Tournament.teams.base_team import BaseTeam
 
 
 class OutdoorTeam(BaseTeam):

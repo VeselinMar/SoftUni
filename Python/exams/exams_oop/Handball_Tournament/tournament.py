@@ -1,9 +1,9 @@
 import re
 
-from Handball_Tournament.equipment.elbow_pad import ElbowPad
-from Handball_Tournament.equipment.knee_pad import KneePad
-from Handball_Tournament.teams.indoor_team import IndoorTeam
-from Handball_Tournament.teams.outdoor_team import OutdoorTeam
+from Python.exams.exams_oop.Handball_Tournament.equipment.elbow_pad import ElbowPad
+from Python.exams.exams_oop.Handball_Tournament.equipment.knee_pad import KneePad
+from Python.exams.exams_oop.Handball_Tournament.teams.indoor_team import IndoorTeam
+from Python.exams.exams_oop.Handball_Tournament.teams.outdoor_team import OutdoorTeam
 
 
 class Tournament:

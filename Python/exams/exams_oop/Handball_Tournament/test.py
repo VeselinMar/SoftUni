@@ -1,4 +1,4 @@
-from Handball_Tournament.tournament import Tournament
+from Python.exams.exams_oop.Handball_Tournament.tournament import Tournament
 
 t = Tournament('SoftUniada2023', 2)
 

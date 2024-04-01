@@ -1,4 +1,4 @@
-from Handball_Tournament.equipment.base_equipment import BaseEquipment
+from Python.exams.exams_oop.Handball_Tournament.equipment.base_equipment import BaseEquipment
 
 
 class KneePad(BaseEquipment):
