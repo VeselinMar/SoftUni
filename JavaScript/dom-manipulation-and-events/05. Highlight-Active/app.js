@@ -1,23 +1,23 @@
-// function focused() {
-//     let focused = document.querySelectorAll('div > div');
+function focused() {
+    let focused = document.querySelectorAll('div > div');
     
-//     for (div of focused) {
-//     div.addEventListener('mouseenter', highlightOn);
-//     div.addEventListener('mouseleave', highlightOff);
-//     }
+    for (div of focused) {
+    div.addEventListener('focus', highlightOn);
+    div.addEventListener('blur', highlightOff);
+    }
 
-//     function highlightOn(event) {
-//         let div = event.currentTarget;
-//         div.classList.add('focused');
+    function highlightOn(event) {
+        let div = event.currentTarget;
+        div.classList.add('focused');
 
 
-//     }
+    }
 
-//     function highlightOff(event) {
-//         let div = event.currentTarget;
-//         div.classList.remove('focused');
-//     }
-// }
+    function highlightOff(event) {
+        let div = event.currentTarget;
+        div.classList.remove('focused');
+    }
+}
 
 function focused() {
     let inputElements = document.querySelectorAll('input[type=text]');
