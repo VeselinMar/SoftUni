@@ -50,6 +50,7 @@ def edit_view(request, pk):
         if form.is_valid():
             form.save()
             return redirect('dashboard')
+        # fruit.delete() for delete_view FBV
 
     context = {
         'fruit': fruit,
