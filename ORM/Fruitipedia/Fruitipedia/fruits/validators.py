@@ -8,7 +8,12 @@ class IsOnlyLettersValidator:
         self.message = message
 
     def __call__(self, value: str):
-        if not value.isalpha():
+        # Check if the value matches the allowed pattern
+        if not re.match('^[A-Za-z ]+$', value):
+            raise ValidationError(self.message)
+
+        # Ensure that there is at least one letter
+        if not re.search('[A-Za-z]', value):
             raise ValidationError(self.message)
 
     def deconstruct(self):

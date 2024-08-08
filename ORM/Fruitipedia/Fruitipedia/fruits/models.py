@@ -14,18 +14,20 @@ class Category(models.Model):
         null=False,
     )
 
+    def __str__(self):
+        return self.name
+
 
 class Fruit(models.Model):
     name = models.CharField(
         max_length=30,
         validators=[MinLengthValidator(2),
-                    IsOnlyLettersValidator],
-        help_text='Enter only letters - length between 2 and 30',
+                    IsOnlyLettersValidator()],
         blank=False,
         null=False,
     )
 
-    Image_url = models.URLField(blank=False, null=False)
+    image_url = models.URLField(blank=False, null=False)
 
     description = models.TextField(blank=False, null=False)
 
