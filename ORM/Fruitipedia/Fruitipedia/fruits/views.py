@@ -29,26 +29,30 @@ class CreateFruitView(CreateView):
     success_url = reverse_lazy('dashboard')
 
 
+# function view
 def details_view(request, pk):
     fruit = Fruit.objects.get(pk=pk)
-
+    # create context dictionary
     context = {
         'fruit': fruit
     }
-
+    # render returns request, template_name and the created context dictionary
     return render(request, 'fruits/details-fruit.html', context)
 
 
 def edit_view(request, pk):
+    # get fruit
     fruit = Fruit.objects.get(pk=pk)
 
     if request.method == "GET":
         form = EditFruitForm(instance=fruit)
     else:
         form = EditFruitForm(request.POST, instance=fruit)
-
+        # Check form validity!
         if form.is_valid():
+            # save to db!
             form.save()
+            # redirect to dashboard
             return redirect('dashboard')
         # fruit.delete() for delete_view FBV
 
