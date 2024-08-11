@@ -11,15 +11,15 @@ def create_album(request):
     return render(request, 'albums/create-album.html')
 
 
-def edit_album(request):
+def edit_album(request, pk: int):
     return render(request, 'albums/edit-album.html')
 
 
-def delete_album(request):
+def delete_album(request, pk: int):
     return render(request, 'albums/delete-album.html')
 
 
-def album_details(request):
+def album_details(request, pk:int):
     return render(request, 'albums/album-details.html')
 
 

@@ -12,6 +12,6 @@ urlpatterns = [
         path('delete/<int:pk>/', views.delete_album, name='delete album')
     ])),
     path('song/', include([
-        path('create/', views.create_song, name='create songs')
+        path('create/', views.create_song, name='create song')
     ])),
 ]
