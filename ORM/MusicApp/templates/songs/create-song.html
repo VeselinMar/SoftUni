@@ -5,7 +5,7 @@
 <!--Create Page-->
 <section class="createPage">
 
-    <form action = "{% url 'create song' %}" method='post'>
+    <form action = "{% url 'create song' %}" method='post' enctype="multipart/form-data">
         <fieldset>
             <legend>Add Album</legend>
             <div class="container">
