@@ -35,8 +35,22 @@ class AlbumCreateForm(AlbumBaseForm):
             price=self.cleaned_data['price'],
         )
 
-
         session.add(new_album)
+
+
+class AlbumEditForm(AlbumBaseForm):
+    def save(self, album):
+        album.album_name = self.cleaned_data['album_name']
+        album.image_url = self.cleaned_data['image_url']
+        album.price = self.cleaned_data['price']
+
+
+class AlbumDeleteForm(AlbumBaseForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for field in self.fields.values():
+            field.widget.attrs['disabled'] = True
 
 
 class SongBaseForm(forms.Form):
