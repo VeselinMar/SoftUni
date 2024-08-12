@@ -1,8 +1,42 @@
 from django import forms
 
 from MusicApp.common.session_decorator import session_decorator
-from MusicApp.musics.models import Album
+from MusicApp.musics.models import Album, Song
 from MusicApp.settings import session
+
+
+class AlbumBaseForm(forms.Form):
+    album_name = forms.CharField(
+        max_length=30,
+        label='Album Name:',
+        required=True,
+    )
+
+    image_url = forms.URLField(
+        label='Image URL:',
+        required=True,
+    )
+
+    price = forms.DecimalField(
+        label="Price:",
+        required=True,
+        min_value=0.0,
+        max_digits=7,
+        decimal_places=2,
+    )
+
+
+class AlbumCreateForm(AlbumBaseForm):
+    @session_decorator(session)
+    def save(self):
+        new_album = Album(
+            album_name=self.cleaned_data['album_name'],
+            image_url=self.cleaned_data['image_url'],
+            price=self.cleaned_data['price'],
+        )
+
+
+        session.add(new_album)
 
 
 class SongBaseForm(forms.Form):
@@ -14,7 +48,7 @@ class SongBaseForm(forms.Form):
 
     album = forms.ChoiceField(
         label="Album:",
-        choices=[], # overwrite in init
+        choices=[],  # overwrite in init
     )
 
     @session_decorator(session)
@@ -26,4 +60,13 @@ class SongBaseForm(forms.Form):
 
 
 class SongCreateForm(SongBaseForm):
-    pass
+
+    @session_decorator(session)
+    def save(self):
+        new_song = Song(
+            song_name=self.cleaned_data['song_name'],
+            album_id=self.cleaned_data['album'],
+        )
+
+        session.add(new_song)
+
