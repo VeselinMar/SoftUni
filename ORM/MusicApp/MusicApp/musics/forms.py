@@ -60,6 +60,11 @@ class SongBaseForm(forms.Form):
         required=True,
     )
 
+    artist_name = forms.CharField(
+        label="Artist Name:",
+        max_length=100,
+    )
+
     album = forms.ChoiceField(
         label="Album:",
         choices=[],  # overwrite in init
