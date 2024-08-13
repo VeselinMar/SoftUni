@@ -7,7 +7,7 @@
 
     <form action = "{% url 'create song' %}" method='post' enctype="multipart/form-data">
         <fieldset>
-            <legend>Add Album</legend>
+            <legend>Add Song</legend>
             <div class="container">
                 {{ form }}
                 {% csrf_token  %}

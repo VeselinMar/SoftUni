@@ -94,4 +94,3 @@ class SongCreateForm(SongBaseForm):
         )
 
         session.add(new_song)
-
