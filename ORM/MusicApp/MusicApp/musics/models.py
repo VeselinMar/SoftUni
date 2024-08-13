@@ -50,6 +50,8 @@ class Song(Base):
 
     artist_name = Column(
         String(100),
+        nullable=False,
+        default='Unknown',
     )
 
     music_file_data = Column(
