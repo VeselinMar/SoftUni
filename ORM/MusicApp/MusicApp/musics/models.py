@@ -48,6 +48,10 @@ class Song(Base):
         nullable=False,
     )
 
+    artist_name = Column(
+        String(100),
+    )
+
     music_file_data = Column(
         LargeBinary,
     )
