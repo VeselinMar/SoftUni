@@ -10,10 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from pathlib import Path
-
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-kfkqdzf9c43%1d#glys*!b%pam4kk78ff1k=ew9r7@$3t$+*!f'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,7 +82,7 @@ WSGI_APPLICATION = 'MusicApp.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 # db+connection_driver://username:password@host/db_name
-DATABASE_URL = "postgresql+psycopg2://postgres:Veselin4o@localhost/music_app_db"
+DATABASE_URL = os.environ['DATABASE_URL']
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 Base = declarative_base()
